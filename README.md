@@ -27,3 +27,7 @@ A feature-rich, high-performance 8-puzzle game built with React 19, TypeScript, 
    ```bash
    git clone <repository-url>
    cd 8-puzzle-master
+## Live Demo
+https://8-puzzle-ai-game-3uvg.vercel.app/
+
+Play the AI-powered 8 Puzzle game directly in your browser.
