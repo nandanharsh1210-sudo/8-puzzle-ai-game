@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans;
+  }
+}
+
+@layer components {
+  .neumorphic-card {
+    @apply bg-slate-50 shadow-[8px_8px_16px_#d1d5db,-8px_-8px_16px_#ffffff] rounded-2xl;
+  }
+  .neumorphic-inset {
+    @apply bg-slate-50 shadow-[inset_4px_4px_8px_#d1d5db,inset_-4px_-4px_8px_#ffffff] rounded-xl;
+  }
+  .neumorphic-button {
+    @apply bg-slate-50 shadow-[4px_4px_8px_#d1d5db,-4px_-4px_8px_#ffffff] active:shadow-[inset_2px_2px_4px_#d1d5db,inset_-2px_-2px_4px_#ffffff] transition-all duration-200 rounded-lg;
+  }
+}
+
+.dark { @apply bg-slate-900 text-slate-100; }
+.dark .neumorphic-card { @apply bg-slate-900 shadow-[8px_8px_16px_#020617,-8px_-8px_16px_#1e293b]; }
+.dark .neumorphic-inset { @apply bg-slate-900 shadow-[inset_4px_4px_8px_#020617,inset_-4px_-4px_8px_#1e293b]; }
+.dark .neumorphic-button { @apply bg-slate-900 shadow-[4px_4px_8px_#020617,-4px_-4px_8px_#1e293b] active:shadow-[inset_2px_2px_4px_#020617,inset_-2px_-2px_4px_#1e293b]; }
